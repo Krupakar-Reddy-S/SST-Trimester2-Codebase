@@ -7,10 +7,10 @@ public class BinarySearch {
             return mid;
         }
         if(A[mid] > target){
-            binarySearch(A, target, mid+1, end);
+            binarySearch(A, target, start, mid-1);
         }
         else{
-            binarySearch(A, target, start, mid-1);
+            binarySearch(A, target, mid+1, end);
         }
 
         return -1;
@@ -28,10 +28,10 @@ public class BinarySearch {
                 return mid;
             }
             if(A[mid] > target){
-                end = mid;
+                end = mid - 1;
             }
             else{
-                start = mid;
+                start = mid + 1;
             }
 
         }
