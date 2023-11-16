@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Problem {
+public class SpecialNumberQuery {
 
     /* 
      * Given an Array A[N] & Q queries(L,R)
