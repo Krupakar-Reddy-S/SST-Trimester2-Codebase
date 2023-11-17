@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            height: 500vh;
+            width: 100%;
+            scroll-behavior: smooth;
+        }
+
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(231, 231, 30);
+            margin: 10px;
+        }
+
+        .one{
+            position: relative;
+            top: 0px;
+            left: 100px;
+        }
+
+        .two{
+            position: fixed;
+            background-color: aquamarine;
+            bottom: 10px;
+            right: 10px;
+            border-radius: 100;
+
+        }
+
+        .four{
+            position: sticky;
+            top: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+    </div>
+    <div class="box four"></div>
+</body>
+</html>
