@@ -7,18 +7,29 @@ public class SmallestGoodBase {
      * Good Base: thenbase for which n can be represented as all 1's
     */
 
-    // public static boolean goodBase(int N, int base){
-    //     while(N > 0){
-    //         if(N%base == 1){
-    //             N/=base;
-    //         }
-    //         else{
-    //             return false;
-    //         }
-    //     }
+    // TC = O(NlogN), SC = O(1)
+    public static int smallestGoodBase(int N){
+        for(int i = 2; i < N; i++){
+            if(goodBase(N, i)){
+                return i;
+            }
+        }
 
-    //     return true;
-    // }
+        return -1;
+    }
+
+    public static boolean goodBase(int N, int base){
+        while(N > 0){
+            if(N%base == 1){
+                N/=base;
+            }
+            else{
+                return false;
+            }
+        }
+
+        return true;
+    }
 
     // public static int firstGoodBase(int N, int digit){
     //     int start = 2;
@@ -46,16 +57,6 @@ public class SmallestGoodBase {
     //     return ans;
     // }
 
-    // // TC = O(NlogN), SC = O(1)
-    // public static int smallestGoodBase(int N){
-    //     for(int i = 2; i < N; i++){
-    //         if(goodBase(N, i)){
-    //             return i;
-    //         }
-    //     }
-
-    //     return -1;
-    // }
 
     // // TC = O(logN * logN), SC = O(1)
     // public static int smallestGoodBase1(int N){
@@ -64,7 +65,31 @@ public class SmallestGoodBase {
     //     }
     // }
 
+    public static long smallestGoodBase3(long N) {
+        for (int m = (int) (Math.log(N + 1) / Math.log(2)); m >= 2; m--) {
+            long l = 2, r = (long) (Math.pow(N, 1.0 / (m - 1)) + 1);
+            while (l <= r) {
+                long k = l + (r - l) / 2;
+                long sum = 1, cur = 1;
+                for (int j = 1; j < m; j++) {
+                    cur *= k;
+                    sum += cur;
+                }
+                if (sum == N) {
+                    return k;
+                } else if (sum < N) {
+                    l = k + 1;
+                } else {
+                    r = k - 1;
+                }
+            }
+        }
+    
+        return N - 1;
+    }
+    
+
     public static void main(String[] args) {
-        System.out.println(smallestGoodBase(1000000000000000000L));
+        System.out.println(smallestGoodBase3(1000000000000000000L));
     }
 }
