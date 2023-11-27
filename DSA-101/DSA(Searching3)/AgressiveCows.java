@@ -1,9 +1,6 @@
 public class AgressiveCows {
 
     /* 
-     * 
-     * 
-     * 
      * Return the max vaue of the minimum distance of any two cows.
      * 
      * target -> distance between the closest pair of cows.

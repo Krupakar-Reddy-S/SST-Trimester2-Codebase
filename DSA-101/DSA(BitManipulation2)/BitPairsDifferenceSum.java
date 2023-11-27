@@ -26,6 +26,14 @@ public class BitPairsDifferenceSum {
         return ans;
     }
 
+    public static int bitPairsDifferenceSum1(int[] nums){
+        int ans = 0;
+
+        
+
+        return ans;
+    }
+
     public static void main(String[] args) {
         int A[] = {1, 3, 5 };
         System.out.println(bitPairsDifferenceSum(A));

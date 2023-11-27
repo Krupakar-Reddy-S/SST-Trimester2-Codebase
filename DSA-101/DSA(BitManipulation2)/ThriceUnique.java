@@ -40,7 +40,7 @@ public class ThriceUnique{
             int sum = 0;
             int x = (1 << i);
 
-            for(int j=0; j<nums.length; j++){
+            for(int j = 0; j < nums.length; j++){
                 if((nums[j] & x) != 0){
                     sum++;
                 }
