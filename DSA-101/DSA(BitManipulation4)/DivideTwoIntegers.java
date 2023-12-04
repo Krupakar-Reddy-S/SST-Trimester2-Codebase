@@ -5,9 +5,9 @@ public class DivideTwoIntegers {
      * 
     */
 
-    public static int divide(int Dividend, int Divisor){
+    // public static int divide(int Dividend, int Divisor){
         
-    }
+    // }
 
     public static void main(String[] args) {
         
