@@ -41,6 +41,20 @@ public class LinkedList {
         return temp;
     }
 
+    public Node find(int val) {
+        Node node = head;
+        
+        while (node != null) {
+            if (node.value == val) {
+                return node;
+            }
+
+            node = node.next;
+        }
+
+        return null;
+    }
+
     public void insertFirst(int val) {
         Node temp = new Node(val);
         temp.next = head;

@@ -1,0 +1,46 @@
+/* apply basic styling to the counter */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.counter-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.plus{
+    height: 5vh;
+    width: 5vw;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.minus{
+    height: 5vh;
+    width: 5vw;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.reset{
+    height: 10vh;
+    width: 20vw;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
