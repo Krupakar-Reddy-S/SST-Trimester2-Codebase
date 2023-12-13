@@ -1,4 +1,4 @@
-public class randomPointerLL {
+public class CopyLL {
 
     /* 
      * Given a LL with random pointer. return a deep copy.
