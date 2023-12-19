@@ -1,4 +1,4 @@
-public class HadsCycle {
+public class HasCycle {
 
     /* 
      * Given a LL. Check if there is a cycle
