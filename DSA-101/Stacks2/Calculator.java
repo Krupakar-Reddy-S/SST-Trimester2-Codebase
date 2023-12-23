@@ -2,17 +2,6 @@ import java.util.Stack;
 
 public class Calculator {
 
-    /* 
-     * Given a string, evaluate the expression and return the result.
-     * The string can contain the following:
-     *     1. Digits
-     *     2. Operators (+, -, *, /)
-     *     3. Parentheses
-     * 
-     * Make sure to take care of operator precedence. (BODMAS)
-     * 
-    */
-
     public static int calculator(String str) {
         Stack<Integer> operands = new Stack<>();
         Stack<Character> operators = new Stack<>();
@@ -21,14 +10,20 @@ public class Calculator {
             char c = str.charAt(i);
 
             if (Character.isDigit(c)) {
-                operands.push(c - '0');
+                StringBuilder num = new StringBuilder();
+                while (i < str.length() && Character.isDigit(str.charAt(i))) {
+                    num.append(str.charAt(i));
+                    i++;
+                }
+                i--; // Adjust index after reading the whole number
+                operands.push(Integer.parseInt(num.toString()));
             } else if (c == '(') {
                 operators.push(c);
             } else if (c == ')') {
                 while (operators.peek() != '(') {
                     process(operands, operators);
                 }
-                operators.pop();
+                operators.pop(); // Pop '('
             } else if (c == '+' || c == '-' || c == '*' || c == '/') {
                 while (!operators.isEmpty() && precedence(c) <= precedence(operators.peek())) {
                     process(operands, operators);
@@ -48,22 +43,22 @@ public class Calculator {
         int b = operands.pop();
         int a = operands.pop();
         char operator = operators.pop();
-    
+
         switch (operator) {
             case '+':
                 operands.push(a + b);
                 break;
             case '-':
-                operands.push(a - b); // Corrected
+                operands.push(a - b);
                 break;
             case '*':
                 operands.push(a * b);
                 break;
             case '/':
                 if (b == 0) {
-                    throw new IllegalArgumentException("Cannot divide by zero");
+                    throw new ArithmeticException("Cannot divide by zero");
                 }
-                operands.push(a / b); // Corrected
+                operands.push(a / b);
                 break;
         }
     }
@@ -80,12 +75,12 @@ public class Calculator {
                 return -1;
         }
     }
-    
+
     public static void main(String[] args) {
         String expression1 = "2 + 3 * 2 - 4";
-        System.out.println(calculator(expression1)); // 4
+        System.out.println(calculator(expression1)); // Output: 4
 
         String expression2 = "(10 + 3) * 2 - (7 - 6) * (4 + 8)";
-        System.out.println(calculator(expression2)); // 14
+        System.out.println(calculator(expression2)); // Output: 14
     }
 }
