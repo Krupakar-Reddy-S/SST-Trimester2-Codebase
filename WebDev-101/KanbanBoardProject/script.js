@@ -53,11 +53,39 @@ function generateTicket(task){
         // <div class="ticket-id">#eidut3</div>
         // <div class="ticket-area">Some Task</div>
     // </div>
+    let id = uid.rnd();
     let ticketCont = document.createElement("div");
     ticketCont.className = "ticket-cont";
     ticketCont.innerHTML = `<div class="ticket-color ${taskColor}"></div>
-                            <div class="ticket-id">#eidut3</div>
-                            <div class="ticket-area">${task}</div>`
+                            <div class="ticket-id">#${id}</div>
+                            <div class="ticket-area">${task}</div>
+                            <div class="lock-unlock"><i class="fa-solid fa-lock"></i></div>`
     console.log(ticketCont)
     mainCont.appendChild(ticketCont);
+
+    //handle lock and unlock
+    let taskArea = ticketCont.querySelector('.ticket-area');
+    let lockUnlockBtn = ticketCont.querySelector('.lock-unlock i');
+    lockUnlockBtn.addEventListener('click',function(){
+        if(lockUnlockBtn.classList.contains('fa-lock')){
+            lockUnlockBtn.classList.remove('fa-lock');
+            lockUnlockBtn.classList.add('fa-lock-open')
+            taskArea.setAttribute('contentEditable','true')
+        }else{
+            lockUnlockBtn.classList.remove('fa-lock-open');
+            lockUnlockBtn.classList.add('fa-lock')
+            taskArea.setAttribute('contentEditable','false')
+        }
+    })
+
+    //handle delte of ticket
+    ticketCont.addEventListener('click',function(){
+        if(removeBtnActive)
+            ticketCont.remove();
+    })
 }
+
+
+//selecting the lock-unlock button 
+// let lockUnlockBtn = document.querySelector(".lock-unlock");
+// console.log(lockUnlockBtn);

@@ -1,9 +1,9 @@
-public class Stack {
+public class StackSelf {
     private int[] stackArray;
     private int capacity;
     private int top;
 
-    public Stack(int size) {
+    public StackSelf(int size) {
         capacity = size;
         stackArray = new int[capacity];
         top = -1;

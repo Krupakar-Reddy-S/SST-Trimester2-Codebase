@@ -134,3 +134,9 @@
 .active{
     border: 3px solid black;
 }
+
+.lock-unlock{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
