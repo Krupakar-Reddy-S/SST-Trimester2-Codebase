@@ -29,10 +29,10 @@ public class ReverseK {
         return finalQueue;
     }
 
-    // TC = O(N), SC = O(1)
-    public static Queue<Integer> reverseKOptimized(Queue<Integer> queue, int K) {
+    // // TC = O(N), SC = O(1)
+    // public static Queue<Integer> reverseKOptimized(Queue<Integer> queue, int K) {
         
-    }
+    // }
         
     public static void main(String[] args) {
         Queue<Integer> q = new LinkedList<>();
@@ -43,7 +43,7 @@ public class ReverseK {
         q.add(5);
         System.out.println(q);
 
-        q = reverseKOptimized(q, 3);
-        System.out.println(q);
+        // q = reverseKOptimized(q, 3);
+        // System.out.println(q);
     }
 }
