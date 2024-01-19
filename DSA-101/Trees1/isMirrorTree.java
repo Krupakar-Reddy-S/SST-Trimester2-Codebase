@@ -29,12 +29,12 @@ public class isMirrorTree {
         rootA.right.right = new TreeNode(4);
 
         TreeNode rootB = new TreeNode(10);
-        rootA.left = new TreeNode(8);
-        rootA.right = new TreeNode(9);
-        rootA.left.left = new TreeNode(6);
-        rootA.left.right = new TreeNode(7);
-        rootA.right.left = new TreeNode(4);
-        rootA.right.right = new TreeNode(5);
+        rootB.left = new TreeNode(8);
+        rootB.right = new TreeNode(9);
+        rootB.left.left = new TreeNode(6);
+        rootB.left.right = new TreeNode(7);
+        rootB.right.left = new TreeNode(4);
+        rootB.right.right = new TreeNode(5);
 
         System.out.println(isMirror(rootA, rootB));
     }
