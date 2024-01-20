@@ -1,6 +1,11 @@
 public class TreeHeight {
 
-    // TC = O(N), SC = O()
+    /* 
+     * return the maximum depth of the given tree.
+     * 
+    */
+
+    // TC = O(N), SC = O(log(N))
     public static int treeHeight(TreeNode root) {
         if (root == null) {
             return 0;

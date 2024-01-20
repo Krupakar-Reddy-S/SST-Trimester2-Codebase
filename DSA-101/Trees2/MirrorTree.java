@@ -1,5 +1,13 @@
 public class MirrorTree {
 
+    /* 
+     * Companies: Google, Creator of HomeBrew was asked this question in a Google Interview,
+     *            got rejected for not being able to solve it.
+     * 
+     * Given a tree, return the mirror image of it.
+    */
+
+    // 
     public static TreeNode mirrorTree(TreeNode root) {
         if (root == null) {
             return null;

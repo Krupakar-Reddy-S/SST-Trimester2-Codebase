@@ -1,5 +1,11 @@
 public class CountNodes {
 
+    /* 
+     * Count the No. of Nodes in the tree and return it.
+     * 
+    */
+
+    // TC = O(N), SC = O(log(N))
     public static int countNodes(TreeNode root) {
         if (root == null) {
             return 0;
