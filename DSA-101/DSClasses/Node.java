@@ -74,13 +74,4 @@ public class Node {
         return head;
     }
 
-    public static void main(String[] args) {
-        // Node list = new Node(1);
-        // list = list.insertAtStart(list, 2);
-        // list = list.insertAtEnd(list, 3);
-        // list = list.insertAtPosition(list, 4, 1);
-        // list = list.insertAtPosition(list, 5, 0);
-
-        // list.printList(list);
-    }
 }
