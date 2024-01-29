@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes rotate {
+            from {
+                transform: rotate(180deg);
+            }
+            to {
+                transform: rotate(540deg);
+            }  
+        }
+
+        #clock-container{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #second_hand{
+            width: 2px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+            left: calc(50% - 1px);
+            top: 50%;
+            transform-origin: 50% 0%;
+            transform: translateX(-50%) rotate(0deg);
+            animation: rotate 60s linear infinite;
+        }
+
+        #minute_hand{
+            width: 3px;
+            height: 130px;
+            background-color: blue;
+            position: absolute;
+            left: calc(50% - 2px);
+            top: 50%;
+            transform-origin: 50% 0%;
+            transform: translateX(-50%) rotate(0deg);
+            animation: rotate 3600s linear infinite;
+        }
+
+        #hour_hand{
+            width: 5px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+            left: calc(50% - 3px);
+            top: 50%;
+            transform-origin: 50% 0%;
+            transform: translateX(-50%) rotate(0deg);
+            animation: rotate 43200s linear infinite;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="clock-container">
+        <div id="second_hand"></div>
+        <div id="minute_hand"></div>
+        <div id="hour_hand"></div>
+    </div>
+</body>
+</html>
