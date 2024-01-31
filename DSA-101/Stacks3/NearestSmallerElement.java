@@ -6,10 +6,10 @@ public class NearestSmallerElement {
     /* 
      * Given an Array of +ve Integers.
      * For every index i, find the nearest 
-     * smaller element on th left of i [0, i-1].
+     * smaller element on the left of i [0, i-1].
      * 
      * Example:
-     * Index:  0  1  2   3  4  5
+     * Index:  0  1  2   3  4  5    
      *        [4, 2, 5, 10, 8, 2]
      *        -1 -1  2   5  5 -1
      * 
