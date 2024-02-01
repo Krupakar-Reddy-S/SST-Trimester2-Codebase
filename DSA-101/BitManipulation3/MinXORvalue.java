@@ -47,7 +47,7 @@ public class MinXORvalue {
 
     public static void main(String[] args) {
         int A[] = {7, 3, 11, 10, 6, 2, 3 };
-        System.out.println(Arrays.toString(minXORvalue1(A)));  // Expected: [4, 4]
+        System.out.println(Arrays.toString(minXORvalue1(A)));  // Expected: [3, 3]
 
         int B[] = {2, 3, 2, 4, 5, 5};
         System.out.println(Arrays.toString(minXORvalue1(B)));  // Expected: [2, 2]
