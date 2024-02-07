@@ -12,7 +12,7 @@ def pldu(M):
     n = M.shape[0]
     P = np.eye(n)
     L = np.eye(n)
-    U = M.astype(float)  # Convert U to float to ensure consistent data type
+    U = np.triu(M.astype(float), k=1) + np.eye(n) # Convert U to float to ensure consistent data type
     D = np.zeros_like(M, dtype=float)  # Use float for D as well
 
     for i in range(n - 1):

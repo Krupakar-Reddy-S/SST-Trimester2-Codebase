@@ -127,7 +127,7 @@ def pldu(M):
     P, L, U = lu(M)
     n = M.shape[0]
     D = np.diag(np.diag(U))
-    U = U = np.triu(U)
+    U = np.triu(U)
     
     print("P:")
     for row in P:
@@ -256,4 +256,10 @@ if __name__ == '__main__':
         [0, -1, 2]
     ])
 
-    pldu(M)
+    N = np.array([
+        [0, 0, 2],
+        [2, 1, 2],
+        [1, 2, 1]
+    ])
+
+    pldu(N)
